@@ -1,0 +1,140 @@
+Mengukur efisiensi sebuah Algoritma
+Kompleksitas Algoritma
+
+Tujuan pembelajaran
+Cara mengukur efisiensi algoritma
+Model kebutuhan waktu untuk mengukur efisiensi algoritma
+Model abstrak untuk mengukur efisiensi algoritma
+
+Pendahuluan
+Algoritma yang mangkus(efisien) adalah algoritma yang meminimkan kebutuhan
+memori dan waktu.
+Kebutuhan memori dan waktu suatu algoritma bergantung ukuran input (n),
+berakibat pada jumlah data diproses
+Efisiensi algoritma dapat digunakan untuk menilai algoritma yang bagus
+dari sejumlah algoritma penyelesaian masalah.
+
+
+Model Kebutuhan Waktu
+     (Real Time)
+Menghitung efisiensi algoritma, jika dihitung dari waktu sesungguhnya(real time)
+ketika algoritma dieksekusi oleh komputer, maka "bukan cara yang tepat".
+Alasan:
+setiap komputer memiliki spek berbeda, waktu setiap operasi antara satu komputer
+dengan komputer lain tidak sama.
+Compiler bahasa pemrograman yang berbeda menghasilkan kode mesin yang berbeda, 
+watku setiap operasi antara compiler dengan compiler lain tidak sama
+
+
+Model Abstrak
+Menghitung efisiensi algoritma menggunakan model abstrak (non-real time)
+pengukuran waktu/ruang --> kompleksitas algoritma
+Jenis:
+Kompleksitas waktu T(n), diukur dari jumlah proses komputasi yang dibutuhkan
+untuk menjalankan algoritma
+Kompleksitas ruang S(n), diukur dari jumlah memori yangdigunakan oleh struktur data yang
+terdapat di dalam algoritma (agak sulit dilakukan)
+
+-Kompleksitas waktu lebih reliable untuk kita gunakan.-
+Ukuran input(n):jumlah data yang diproses 
+
+
+
+~Kompleksitas Waktu~
+T(n) adalah jumlah proses komputasi dihitung dari beberapa kali suatu operasi di dalam
+sebuah algoritma --> fungsi ukuran input(n)
+Macam jenis operasi :
+Input/Output
+Aritmatik
+Assignment
+Pengakses elemen list
+Pemanggilan function
+
+Kita hanya menghitung operasi pokok yang mendasari suatu algoritma
+
+COntoh operasi pokok:
+1. Algoritma pencarian di dalam list
+Operasi pokok: perbandingan elemen list
+2. Algortima pengurutan
+Operasi pokok : perbandingan elemen dan penrtukaran elemen
+3. Algoritma penjumlahan 2 buah matriks
+Operasi pokok : penjumlahan
+4. Algoritma perkalian 2 buah matriks
+Operasi pokok : perkalian dan penjumlahan
+
+def rerata(a,):
+	sum = 0
+	n = len(a)
+	for i in range(n):
+		sum = sum + a[i]
+	return sum/len(a)
+
+Operasi pokoknya adalah : 
+for i in range(n):
+maka kompleksitas waktu nya T(n) = n
+
+Kompleksitas waktu dibedakan menjadi 2:
+1. Tmax(n):Kompleksitas waktu untuk kasus terburuk (worst case) --> kebutuhan waktu maksimal
+2. Tmin(n): Kompleksitas waktu untuk kasus terbaik (best case) --> kebutuhan waktu minimum
+Kesimpulannya tetap menggunakna worst case untuk menjadi kompleksitas waktu
+Kompleksitas waktu T(n) = n
+
+Karena T(n) relatif setiap orang.
+ada:
+O(n) --> big O
+
+n = 100
+T(n) = n^2 + 1, T(n) = 10001
+T(n) = n^2 + 2, T(n) = 10002
+Karena konstanta paling berpengaruh adalah n^2
+O(n) = n^2
+
+
+Kompleksitas Waktu T(n)
+BAGUS SEKALI
+~Sedikit ataupun banyak n tidak berpengaruh
+def getData(myList, n) :
+	retun myListn[n]
+def appen2list(myList,x):
+	myList.append(x)
+	return myList
+
+Kompleksitas O(n)
+BAIK
+~Semakin banyak n, maka semakin lama proses nya.
+def find(myList,x):
+	result=False
+	for data in range(myList):
+		if data==x:
+			result = True
+		break
+	return result
+
+Kompleksitas O (log n)
+log n berarti ada perulangan dengan ada pengalian
+def aneh (mylist):
+	i=1
+	while i <= len(mylist):
+		print("Hello world")
+		i *= 2
+
+Kompleksitas O(n log n)
+n log n berarti ada perulangan bertingkat 
+def aneh(myList):
+	i=1
+	while i <=len(myList):
+		j=0
+		while j < len (myList):
+			print ("Hello World")
+			j += 1
+		i *= 2
+
+Kompleksitas Polynomial O (n^m)
+
+for i in range (n):
+	for j in range(n):
+		sum = 0
+		for k in range(n):
+
+
+

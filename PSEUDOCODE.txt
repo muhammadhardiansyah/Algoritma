@@ -1,0 +1,36 @@
+PSEUDUCODE
+Salah satu cara untuk mempresentasikan algoritma.
+Kode penulisannya mirip dengan kode program.
+------------------------
+| Pseudo = semu	       |
+| code = kode program  |
+------------------------
+Lebih mudah di implementasikan ke kode program.
+Penulian pseudocode mirip dengan bahasa pemrograman.
+contoh:
+Membuat aplikasi yang akan membaca jumlah murid disebuah sekolah SMA dan 
+kemudian setelah jumlah murid didapatkan. 
+Program itu akan membaca setiap nilai akhir dari siswa, sampai sejumlah siswa. 
+Setelah didapatkan semua, apk harus bisa menghitung rata rata nilai akhir.
+
+1. Memproses rata nilai untuk siswa di sekolah itu. (KURANG BAIK)
+
+2. 1. Meminta jumlah siswa
+   2. Input masing2 siswa
+   3. Menghitung rerata untuk siswa di sekolah itu. 
+   (KURANG BAIK) (LEBIH BAIK DARI YANG PERTAMA) (LANGKAH NOMOR 3 KURANG JELAS)
+
+3. JELAS. TERLALU BANYAK UNTUK DIKETIK.
+
+Contoh PSEUDOCODE
+ Read num1,num2,num3
+ if (num1<num2)
+   if(num2<num3)
+      write num1, num2, num3
+   Else
+       if(num3<num1)
+          Write num3, num1, num2
+       Else
+           Write num1,num3,num2
+(ASCENDING)
+
